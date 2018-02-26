@@ -1,0 +1,27 @@
+[Mon Feb 26 10:25:46 2018] Provided cores: 32
+[Mon Feb 26 10:25:46 2018] Rules claiming more threads will be scaled down.
+[Mon Feb 26 10:25:46 2018] Job counts:
+[Mon Feb 26 10:25:46 2018] 	count	jobs
+[Mon Feb 26 10:25:46 2018] 	1	pseq_loc_load
+[Mon Feb 26 10:25:46 2018] 	1
+
+[Mon Feb 26 10:25:46 2018] rule pseq_loc_load:
+[Mon Feb 26 10:25:46 2018]     input: /mnt/data/jeremy/scripts/pipelines/xhmm/test/run/DATA.EXOME.targets.reg
+[Mon Feb 26 10:25:46 2018]     output: /mnt/data/jeremy/scripts/pipelines/xhmm/test/run/DATA.EXOME.targets.LOCDB, /mnt/data/jeremy/scripts/pipelines/xhmm/test/run/DATA.EXOME.targets.LOCDB.loc-load
+[Mon Feb 26 10:25:46 2018]     jobid: 0
+
+[Mon Feb 26 10:25:46 2018] pseq . loc-load --locdb /mnt/data/jeremy/scripts/pipelines/xhmm/test/run/DATA.EXOME.targets.LOCDB --file /mnt/data/jeremy/scripts/pipelines/xhmm/test/run/DATA.EXOME.targets.reg --group targets --out /mnt/data/jeremy/scripts/pipelines/xhmm/test/run/DATA.EXOME.targets.LOCDB.loc-load
+[Mon Feb 26 10:25:57 2018] Waiting at most 30 seconds for missing files.
+[Mon Feb 26 10:26:27 2018] Error in rule pseq_loc_load:
+[Mon Feb 26 10:26:27 2018]     jobid: 0
+[Mon Feb 26 10:26:27 2018]     output: /mnt/data/jeremy/scripts/pipelines/xhmm/test/run/DATA.EXOME.targets.LOCDB, /mnt/data/jeremy/scripts/pipelines/xhmm/test/run/DATA.EXOME.targets.LOCDB.loc-load
+
+[Mon Feb 26 10:26:27 2018] MissingOutputException in line 152 of /mnt/data/jeremy/scripts/pipelines/xhmm/smk/wes_xhmm.smk:
+[Mon Feb 26 10:26:27 2018] Missing files after 30 seconds:
+[Mon Feb 26 10:26:27 2018] /mnt/data/jeremy/scripts/pipelines/xhmm/test/run/DATA.EXOME.targets.LOCDB.loc-load
+[Mon Feb 26 10:26:27 2018] This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+[Mon Feb 26 10:26:27 2018] Removing output files of failed job pseq_loc_load since they might be corrupted:
+[Mon Feb 26 10:26:27 2018] /mnt/data/jeremy/scripts/pipelines/xhmm/test/run/DATA.EXOME.targets.LOCDB
+[Mon Feb 26 10:26:27 2018] Will exit after finishing currently running jobs.
+[Mon Feb 26 10:26:27 2018] Exiting because a job execution failed. Look above for error message
+[Mon Feb 26 10:26:27 2018] Complete log: .snakemake/log/2018-02-26T102545.967372.snakemake.log

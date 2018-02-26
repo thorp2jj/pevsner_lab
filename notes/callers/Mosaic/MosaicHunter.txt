@@ -1,0 +1,37 @@
+MosaicHunter Implementation
+
+Call InDels & SVs prior to implementing MosaicHunter pipeline
+    Align (BWA) & call InDels & SVs
+    Merge InDel & SV calls into BED file
+
+    InDels -> GATK
+    SVs -> CNVnator (WGS) / XHMM (WES)
+
+MosaicHunter
+
+1. Add dependencies (see MosaicHunter_dependencies.txt)
+
+2. Prepare reads
+    Remove improperly mapped reads
+    samtools view -h -f 0x2 input.bam | perl -ne 'print if (/^@/||(/NM:i:(\d+)/&&$1<=4))' | samtools view -Sb - >cleaner.bam
+
+3. Run MosaicHunter
+    Standard
+     java -jar your_path/build/mosaichunter.jar <predefined_configuration> -P param_1=value_1 [-P param_2=value_2 [...]]
+
+    Real example
+    sbatch -N 1 -n 1 -c 11 /mnt/data/jeremy/scripts/sbatch_scripts/general.sh "java -jar /mnt/data/jeremy/programs/MosaicHunter/build/mosaichunter.jar genome \
+    -P input_file=$file \
+    -P reference_file=/mnt/data/reference/hs37d5.fa \
+    -P mosaic_filter.sex=$sex \
+    -P mosaic_filter.dbsnp_file=/mnt/data/jeremy/programs/MosaicHunter/resources/dbsnp_137.b37.tsv\
+    -P repetitive_region_filter.bed_file=/mnt/data/jeremy/programs/MosaicHunter/resources/all_repeats.b37.bed\
+    -P indel_region_filter.bed_file=/mnt/data/jeremy/projects/sws/collab_samples/error_prone_regions_beds/beds/${outname}.indel.cnvs.bed\
+    -P common_site_filter.bed_file=/mnt/data/jeremy/programs/MosaicHunter/resources/WES_Agilent_50M.error_prone.b37.bed\
+    -P output_dir=/mnt/data/jeremy/projects/sws/collab_samples/mosaic_hunter/output/${outname}\
+    -P mode=paired_naive \
+    -P control_bam_file=/mnt/data/jeremy/projects/sws/collab_samples/cleaned_bams/${cntrl_name}"
+
+
+
+

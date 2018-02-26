@@ -1,0 +1,16 @@
+List of annotation software for SNVs & InDels
+
+    VAAST2
+        Input: GVF
+        Output: two vaast unique outputs
+
+    SNPeff
+        Input: VCF
+        Output: VCF & two other files
+    
+    CADD
+        Input: VCF
+        Output: ??
+
+
+ 

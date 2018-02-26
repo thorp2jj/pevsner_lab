@@ -1,0 +1,16 @@
+*.bam
+*.fastq*
+*.bam
+*.fa
+*.fasta
+*.bed
+*.log
+*.out
+*.vcf
+*.psl
+scratch/
+projects/
+programs/
+aws/
+cache/
+resources/

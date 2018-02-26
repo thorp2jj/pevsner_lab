@@ -1,0 +1,82 @@
+XHMM Implementation
+
+WES SV calling
+
+1. Splitup list of locations for the per-sample BAM files into two files:
+    group1.READS.bam.list
+    group2.READS.bam.list
+
+    Format:
+        /path/to/bams/{sample1}.bam
+        /path/to/bams/{sample2}.bam
+
+
+2. Get Sequencing Depths (GATK DepthOfCoverage)
+    sbatch -N 1 -n 1 -c 10 /mnt/data/jeremy/scripts/sbatch_scripts/general.sh "java -Xmx3072m -jar $GATK -T DepthOfCoverage \
+    -I group1.READS.ctrl.bam.list -L /mnt/data/jeremy/projects/sws/collab_samples/sureselect_exon_v5/converted_to_grch37_format/S04380110_Padded_grch37.bed /
+    -R /mnt/data/reference/hs37d5.fa -dt BY_SAMPLE -dcov 5000 -l INFO --omitDepthOutputAtEachBase -omitLocusTable --minBaseQuality 0 \
+    --minMappingQuality 20 --start 1 --stop 5000 --nBins 200 --includeRefNSites --countType COUNT_FRAGMENTS -o group1.DATA"
+
+
+3. Merge GATK DepthOfCoverage outputs
+    sbatch -N 1 -n 1 -c 5 /mnt/data/jeremy/scripts/sbatch_scripts/general.sh "xhmm --mergeGATKdepths -o /{path}/sws.RD.txt \
+    --GATKdepths /{path}/group1.DATA.sample_interval_summary --GATKdepths /{path}/group2.DATA.sample_interval_summary"
+
+
+4. Calculate GC content of targets
+    sbatch -N 1 -n 1 -c 5 /mnt/data/jeremy/scripts/sbatch_scripts/general.sh "java -Xmx3072m -jar $GATK -T GCContentByInterval -L /mnt/data/jeremy/projects/sws/collab_samples/sureselect_exon_v5/converted_to_grch37_format/S04380110_Padded_grch37.bed -R /mnt/data/reference/hs37d5.fa -o /{path}/sws.locus_GC.txt"
+
+
+5. Optional: Plink/Seq calculate sequence complexity of targets
+    SKIP
+
+
+6. Filter samples and targets
+    sbatch -N 1 -n 1 -c 15 /mnt/data/jeremy/scripts/sbatch_scripts/general.sh "xhmm --matrix -r /{path}/sws.RD.txt --centerData \
+    --centerType target -o sws.filtered_centered.RD.txt --outputExcludedTargets sws.filtered_centered.RD.txt.filtered_targets.txt \
+    --outputExcludedSamples sws.filtered_centered.RD.txt.filtered_samples.txt --excludeTargets /{path}/sws_extreme_gc_targets.txt \
+    --minTargetSize 10 --maxTargetSize 10000 --minMeanTargetRD 10 --maxMeanTargetRD 500 --minMeanSampleRD 25 --maxMeanSampleRD 200 --maxSdSampleRD 150"
+
+
+7. Principal component analysis (PCA)
+    sbatch -N 1 -n 1 -c 15 /mnt/data/jeremy/scripts/sbatch_scripts/general.sh "xhmm --PCA -r /{path}/sws.filtered_centered.RD.txt --PCAfiles sws.RD_PCA"
+
+
+8. Normalize mean-centered data using PCA 
+    sbatch -N 1 -n 1 -c 15 /mnt/data/jeremy/scripts/sbatch_scripts/general.sh "xhmm --normalize \
+    -r /{path}/filter_sample_targets_for_norm/sws.filtered_centered.RD.txt --PCAfiles sws.RD_PCA --normalizeOutput \
+    sws.PCA_normalized.txt --PCnormalizeMethod PVE_mean --PVE_mean_factor 0.7"
+
+
+9. Filter & calcualte z-scores
+    sbatch -N 1 -n 1 -c 15 /mnt/data/jeremy/scripts/sbatch_scripts/general.sh "xhmm --matrix \
+    -r /{path}/sws.PCA_normalized.txt --centerData --centerType sample --zScoreData -o sws.PCA_normalized.filtered.sample_zscores.RD.txt \
+    --outputExcludedTargets sws.PCA_normalized.filtered.sample_zscores.RD.txt.filtered_targets.txt \
+    --outputExcludedSamples sws.PCA_normalized.filtered.sample_zscores.RD.txt.filtered_samples.txt --maxSdTargetRD 30"
+
+10. Filter original read-depth to restrict to same samples and targets as filtered, normalized data
+    sbatch -N 1 -n 1 -c 15 /mnt/data/jeremy/scripts/sbatch_scripts/general.sh "xhmm --matrix -r {path}/{samples}.RD.txt \
+    --excludeTargets /{path}/{samples}.filtered_centered.RD.txt.filtered_targets.txt \
+    --excludeTargets /{path}/{samples}.PCA_normalized.filtered.sample_zscores.RD.txt.filtered_targets.txt \
+    --excludeSamples /{path}/{samples}.filtered_centered.RD.txt.filtered_samples.txt \
+    --excludeSamples /{path}/{samples}.PCA_normalized.filtered.sample_zscores.RD.txt.filtered_samples.txt -o {samples}.same_filtered.RD.txt"
+
+11. Call CNVs (Discovery)
+    sbatch -N 1 -n 1 -c 15 /mnt/data/jeremy/scripts/sbatch_scripts/general.sh "xhmm --discover -p /cm/shared/plab/apps/xhmm/1.0/params.txt \
+    -r /{path}/{samples}.PCA_normalized.filtered.sample_zscores.RD.txt -R /{path}/{samples}.same_filtered.RD.txt \
+    -c {samples}.xcnv -a {samples}.aux_xcnv -s {samples}"
+
+12. Genotyping
+    sbatch -N 1 -n 1 -c 15 /mnt/data/jeremy/scripts/sbatch_scripts/general.sh "xhmm --genotype -p /cm/shared/plab/apps/xhmm/1.0/params.txt \
+    -r /{path}/{samples}.PCA_normalized.filtered.sample_zscores.RD.txt -R /{path}/{samples}.same_filtered.RD.txt -g /{path}/{samples}.xcnv \
+    -F /mnt/data/reference/hs37d5.fa -v {samples}.vcf"
+
+
+
+
+
+
+
+
+
+

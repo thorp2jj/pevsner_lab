@@ -1,0 +1,24 @@
+List of software for annotating SV calls
+
+    GenomeStrip WGS
+        Input: BAM/CRAM
+        Output: VCF
+
+    ANNOVAR     
+        Input: VCF
+        Output: VCF
+
+    XHMM        WES
+        Input: BAM
+        Output: xcnv & VCF 
+
+    CNVnator    WGS
+        Input: BAM
+        Output: custom (can be converted to VCF)    
+
+    LUMPY       WGS
+        Input: BAM
+        Output: VCF
+
+
+

@@ -1,0 +1,16 @@
+{
+  "reference": "/mnt/data/reference/hs37d5.fa",
+  "exome_region": "/mnt/data/jeremy/projects/smri/sureselect_v5_capture_targets/S04380110_Covered.interval_list",
+  "dir": {
+    "out": "/mnt/data/jeremy/scripts/pipelines/xhmm/test/run",
+    "tmp": "tmp"
+  },
+  "samples": {
+    "TAC-94": [
+      {
+        "sample": "TAC-94",
+        "bam": "/mnt/data/jeremy/scripts/pipelines/xhmm/test/TAC-94_recal.bam"
+      }
+    ]
+  }
+}
