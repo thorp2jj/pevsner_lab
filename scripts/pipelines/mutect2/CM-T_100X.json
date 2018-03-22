@@ -1,0 +1,830 @@
+{
+  "resource": {
+    "germline_resource": "/mnt/data/jeremy/resources/gnomad/af-only-gnomad.raw.sites.b37.vcf.gz",
+    "panel_of_normals": "/mnt/data/jeremy/projects/smri/mutect2/panel_of_normals/100X/TAC_norms/TAC_100X_pon.vcf.gz"
+  },
+  "samples": {
+    "CM-50": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-50_recal.bam",
+        "sample": "CM-50",
+        "matched_normal_sample": "TAC-77",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-77_recal.bam"
+      }
+    ],
+    "CM-81": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-81_recal.bam",
+        "sample": "CM-81",
+        "matched_normal_sample": "TAC-30",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-30_recal.bam"
+      }
+    ],
+    "CM-68": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-68_recal.bam",
+        "sample": "CM-68",
+        "matched_normal_sample": "TAC-86",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-86_recal.bam"
+      }
+    ],
+    "CM-44": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-44_recal.bam",
+        "sample": "CM-44",
+        "matched_normal_sample": "TAC-74",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-74_recal.bam"
+      }
+    ],
+    "CM-63": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-63_recal.bam",
+        "sample": "CM-63",
+        "matched_normal_sample": "TAC-21",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-21_recal.bam"
+      }
+    ],
+    "CM-53": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-53_recal.bam",
+        "sample": "CM-53",
+        "matched_normal_sample": "TAC-79",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-79_recal.bam"
+      }
+    ],
+    "CM-86": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-86_recal.bam",
+        "sample": "CM-86",
+        "matched_normal_sample": "TAC-95",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-95_recal.bam"
+      }
+    ],
+    "CM-57": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-57_recal.bam",
+        "sample": "CM-57",
+        "matched_normal_sample": "TAC-19",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-19_recal.bam"
+      }
+    ],
+    "CM-88": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-88_recal.bam",
+        "sample": "CM-88",
+        "matched_normal_sample": "TAC-96",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-96_recal.bam"
+      }
+    ],
+    "CM-102": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-102_recal.bam",
+        "sample": "CM-102",
+        "matched_normal_sample": "TAC-33",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-33_recal.bam"
+      }
+    ],
+    "CM-135": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-135_recal.bam",
+        "sample": "CM-135",
+        "matched_normal_sample": "TAC-46",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-46_recal.bam"
+      }
+    ],
+    "CM-126": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-126_recal.bam",
+        "sample": "CM-126",
+        "matched_normal_sample": "TAC-42",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-42_recal.bam"
+      }
+    ],
+    "CM-2": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-2_recal.bam",
+        "sample": "CM-2",
+        "matched_normal_sample": "TAC-53",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-53_recal.bam"
+      }
+    ],
+    "CM-156": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-156_recal.bam",
+        "sample": "CM-156",
+        "matched_normal_sample": "TAC-52",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-52_recal.bam"
+      }
+    ],
+    "CM-8": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-8_recal.bam",
+        "sample": "CM-8",
+        "matched_normal_sample": "TAC-56",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-56_recal.bam"
+      }
+    ],
+    "CM-59": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-59_recal.bam",
+        "sample": "CM-59",
+        "matched_normal_sample": "TAC-82",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-82_recal.bam"
+      }
+    ],
+    "CM-45": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-45_recal.bam",
+        "sample": "CM-45",
+        "matched_normal_sample": "TAC-15",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-15_recal.bam"
+      }
+    ],
+    "CM-18": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-18_recal.bam",
+        "sample": "CM-18",
+        "matched_normal_sample": "TAC-6",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-6_recal.bam"
+      }
+    ],
+    "CM-28": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-28_recal.bam",
+        "sample": "CM-28",
+        "matched_normal_sample": "TAC-66",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-66_recal.bam"
+      }
+    ],
+    "CM-38": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-38_recal.bam",
+        "sample": "CM-38",
+        "matched_normal_sample": "TAC-71",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-71_recal.bam"
+      }
+    ],
+    "CM-20": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-20_recal.bam",
+        "sample": "CM-20",
+        "matched_normal_sample": "TAC-62",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-62_recal.bam"
+      }
+    ],
+    "CM-64": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-64_recal.bam",
+        "sample": "CM-64",
+        "matched_normal_sample": "TAC-84",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-84_recal.bam"
+      }
+    ],
+    "CM-150": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-150_recal.bam",
+        "sample": "CM-150",
+        "matched_normal_sample": "TAC-50",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-50_recal.bam"
+      }
+    ],
+    "CM-54": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-54_recal.bam",
+        "sample": "CM-54",
+        "matched_normal_sample": "TAC-18",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-18_recal.bam"
+      }
+    ],
+    "CM-99": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-99_recal.bam",
+        "sample": "CM-99",
+        "matched_normal_sample": "TAC-34",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-34_recal.bam"
+      }
+    ],
+    "CM-76": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-76_recal.bam",
+        "sample": "CM-76",
+        "matched_normal_sample": "TAC-90",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-90_recal.bam"
+      }
+    ],
+    "CM-30": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-30_recal.bam",
+        "sample": "CM-30",
+        "matched_normal_sample": "TAC-10",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-10_recal.bam"
+      }
+    ],
+    "CM-6": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-6_recal.bam",
+        "sample": "CM-6",
+        "matched_normal_sample": "TAC-3",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-3_recal.bam"
+      }
+    ],
+    "CM-34": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-34_recal.bam",
+        "sample": "CM-34",
+        "matched_normal_sample": "TAC-69",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-69_recal.bam"
+      }
+    ],
+    "CM-62": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-62_recal.bam",
+        "sample": "CM-62",
+        "matched_normal_sample": "TAC-83",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-83_recal.bam"
+      }
+    ],
+    "CM-41": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-41_recal.bam",
+        "sample": "CM-41",
+        "matched_normal_sample": "TAC-73",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-73_recal.bam"
+      }
+    ],
+    "CM-71": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-71_recal.bam",
+        "sample": "CM-71",
+        "matched_normal_sample": "TAC-88",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-88_recal.bam"
+      }
+    ],
+    "CM-58": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-58_recal.bam",
+        "sample": "CM-58",
+        "matched_normal_sample": "TAC-81",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-81_recal.bam"
+      }
+    ],
+    "CM-120": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-120_recal.bam",
+        "sample": "CM-120",
+        "matched_normal_sample": "TAC-40",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-40_recal.bam"
+      }
+    ],
+    "CM-105": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-105_recal.bam",
+        "sample": "CM-105",
+        "matched_normal_sample": "TAC-35",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-35_recal.bam"
+      }
+    ],
+    "CM-87": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-87_recal.bam",
+        "sample": "CM-87",
+        "matched_normal_sample": "TAC-29",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-29_recal.bam"
+      }
+    ],
+    "CM-16": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-16_recal.bam",
+        "sample": "CM-16",
+        "matched_normal_sample": "TAC-60",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-60_recal.bam"
+      }
+    ],
+    "CM-56": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-56_recal.bam",
+        "sample": "CM-56",
+        "matched_normal_sample": "TAC-80",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-80_recal.bam"
+      }
+    ],
+    "CM-100": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-100_recal.bam",
+        "sample": "CM-100",
+        "matched_normal_sample": "TAC-102",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-102_recal.bam"
+      }
+    ],
+    "CM-66": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-66_recal.bam",
+        "sample": "CM-66",
+        "matched_normal_sample": "TAC-22",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-22_recal.bam"
+      }
+    ],
+    "CM-31": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-31_recal.bam",
+        "sample": "CM-31",
+        "matched_normal_sample": "TAC-67",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-67_recal.bam"
+      }
+    ],
+    "CM-84": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-84_recal.bam",
+        "sample": "CM-84",
+        "matched_normal_sample": "TAC-28",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-28_recal.bam"
+      }
+    ],
+    "CM-33": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-33_recal.bam",
+        "sample": "CM-33",
+        "matched_normal_sample": "TAC-11",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-11_recal.bam"
+      }
+    ],
+    "CM-10": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-10_recal.bam",
+        "sample": "CM-10",
+        "matched_normal_sample": "TAC-57",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-57_recal.bam"
+      }
+    ],
+    "CM-77": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-77_recal.bam",
+        "sample": "CM-77",
+        "matched_normal_sample": "TAC-91",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-91_recal.bam"
+      }
+    ],
+    "CM-117": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-117_recal.bam",
+        "sample": "CM-117",
+        "matched_normal_sample": "TAC-39",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-39_recal.bam"
+      }
+    ],
+    "CM-24": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-24_recal.bam",
+        "sample": "CM-24",
+        "matched_normal_sample": "TAC-8",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-8_recal.bam"
+      }
+    ],
+    "CM-51": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-51_recal.bam",
+        "sample": "CM-51",
+        "matched_normal_sample": "TAC-17",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-17_recal.bam"
+      }
+    ],
+    "CM-78": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-78_recal.bam",
+        "sample": "CM-78",
+        "matched_normal_sample": "TAC-26",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-26_recal.bam"
+      }
+    ],
+    "CM-4": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-4_recal.bam",
+        "sample": "CM-4",
+        "matched_normal_sample": "TAC-54",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-54_recal.bam"
+      }
+    ],
+    "CM-98": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-98_recal.bam",
+        "sample": "CM-98",
+        "matched_normal_sample": "TAC-101",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-101_recal.bam"
+      }
+    ],
+    "CM-48": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-48_recal.bam",
+        "sample": "CM-48",
+        "matched_normal_sample": "TAC-16",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-16_recal.bam"
+      }
+    ],
+    "CM-94": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-94_recal.bam",
+        "sample": "CM-94",
+        "matched_normal_sample": "TAC-99",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-99_recal.bam"
+      }
+    ],
+    "CM-15": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-15_recal.bam",
+        "sample": "CM-15",
+        "matched_normal_sample": "TAC-5",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-5_recal.bam"
+      }
+    ],
+    "CM-26": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-26_recal.bam",
+        "sample": "CM-26",
+        "matched_normal_sample": "TAC-65",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-65_recal.bam"
+      }
+    ],
+    "CM-35": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-35_recal.bam",
+        "sample": "CM-35",
+        "matched_normal_sample": "TAC-70",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-70_recal.bam"
+      }
+    ],
+    "CM-27": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-27_recal.bam",
+        "sample": "CM-27",
+        "matched_normal_sample": "TAC-9",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-9_recal.bam"
+      }
+    ],
+    "CM-82": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-82_recal.bam",
+        "sample": "CM-82",
+        "matched_normal_sample": "TAC-93",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-93_recal.bam"
+      }
+    ],
+    "CM-42": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-42_recal.bam",
+        "sample": "CM-42",
+        "matched_normal_sample": "TAC-14",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-14_recal.bam"
+      }
+    ],
+    "CM-65": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-65_recal.bam",
+        "sample": "CM-65",
+        "matched_normal_sample": "TAC-85",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-85_recal.bam"
+      }
+    ],
+    "CM-106": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-106_recal.bam",
+        "sample": "CM-106",
+        "matched_normal_sample": "TAC-105",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-105_recal.bam"
+      }
+    ],
+    "CM-9": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-9_recal.bam",
+        "sample": "CM-9",
+        "matched_normal_sample": "TAC-2",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-2_recal.bam"
+      }
+    ],
+    "CM-74": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-74_recal.bam",
+        "sample": "CM-74",
+        "matched_normal_sample": "TAC-89",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-89_recal.bam"
+      }
+    ],
+    "CM-69": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-69_recal.bam",
+        "sample": "CM-69",
+        "matched_normal_sample": "TAC-23",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-23_recal.bam"
+      }
+    ],
+    "CM-144": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-144_recal.bam",
+        "sample": "CM-144",
+        "matched_normal_sample": "TAC-48",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-48_recal.bam"
+      }
+    ],
+    "CM-3": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-3_recal.bam",
+        "sample": "CM-3",
+        "matched_normal_sample": "TAC-1",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-1_recal.bam"
+      }
+    ],
+    "CM-14": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-14_recal.bam",
+        "sample": "CM-14",
+        "matched_normal_sample": "TAC-59",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-59_recal.bam"
+      }
+    ],
+    "CM-80": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-80_recal.bam",
+        "sample": "CM-80",
+        "matched_normal_sample": "TAC-92",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-92_recal.bam"
+      }
+    ],
+    "CM-92": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-92_recal.bam",
+        "sample": "CM-92",
+        "matched_normal_sample": "TAC-98",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-98_recal.bam"
+      }
+    ],
+    "CM-147": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-147_recal.bam",
+        "sample": "CM-147",
+        "matched_normal_sample": "TAC-49",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-49_recal.bam"
+      }
+    ],
+    "CM-22": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-22_recal.bam",
+        "sample": "CM-22",
+        "matched_normal_sample": "TAC-63",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-63_recal.bam"
+      }
+    ],
+    "CM-114": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-114_recal.bam",
+        "sample": "CM-114",
+        "matched_normal_sample": "TAC-38",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-38_recal.bam"
+      }
+    ],
+    "CM-95": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-95_recal.bam",
+        "sample": "CM-95",
+        "matched_normal_sample": "TAC-100",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-100_recal.bam"
+      }
+    ],
+    "CM-12": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-12_recal.bam",
+        "sample": "CM-12",
+        "matched_normal_sample": "TAC-4",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-4_recal.bam"
+      }
+    ],
+    "CM-32": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-32_recal.bam",
+        "sample": "CM-32",
+        "matched_normal_sample": "TAC-68",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-68_recal.bam"
+      }
+    ],
+    "CM-111": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-111_recal.bam",
+        "sample": "CM-111",
+        "matched_normal_sample": "TAC-37",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-37_recal.bam"
+      }
+    ],
+    "CM-75": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-75_recal.bam",
+        "sample": "CM-75",
+        "matched_normal_sample": "TAC-25",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-25_recal.bam"
+      }
+    ],
+    "CM-40": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-40_recal.bam",
+        "sample": "CM-40",
+        "matched_normal_sample": "TAC-72",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-72_recal.bam"
+      }
+    ],
+    "CM-93": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-93_recal.bam",
+        "sample": "CM-93",
+        "matched_normal_sample": "TAC-31",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-31_recal.bam"
+      }
+    ],
+    "CM-141": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-141_recal.bam",
+        "sample": "CM-141",
+        "matched_normal_sample": "TAC-47",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-47_recal.bam"
+      }
+    ],
+    "CM-23": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-23_recal.bam",
+        "sample": "CM-23",
+        "matched_normal_sample": "TAC-64",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-64_recal.bam"
+      }
+    ],
+    "CM-104": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-104_recal.bam",
+        "sample": "CM-104",
+        "matched_normal_sample": "TAC-104",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-104_recal.bam"
+      }
+    ],
+    "CM-132": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-132_recal.bam",
+        "sample": "CM-132",
+        "matched_normal_sample": "TAC-44",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-44_recal.bam"
+      }
+    ],
+    "CM-89": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-89_recal.bam",
+        "sample": "CM-89",
+        "matched_normal_sample": "TAC-97",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-97_recal.bam"
+      }
+    ],
+    "CM-60": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-60_recal.bam",
+        "sample": "CM-60",
+        "matched_normal_sample": "TAC-20",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-20_recal.bam"
+      }
+    ],
+    "CM-123": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-123_recal.bam",
+        "sample": "CM-123",
+        "matched_normal_sample": "TAC-41",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-41_recal.bam"
+      }
+    ],
+    "CM-13": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-13_recal.bam",
+        "sample": "CM-13",
+        "matched_normal_sample": "TAC-58",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-58_recal.bam"
+      }
+    ],
+    "CM-17": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-17_recal.bam",
+        "sample": "CM-17",
+        "matched_normal_sample": "TAC-61",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-61_recal.bam"
+      }
+    ],
+    "CM-52": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-52_recal.bam",
+        "sample": "CM-52",
+        "matched_normal_sample": "TAC-78",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-78_recal.bam"
+      }
+    ],
+    "CM-21": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-21_recal.bam",
+        "sample": "CM-21",
+        "matched_normal_sample": "TAC-7",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-7_recal.bam"
+      }
+    ],
+    "CM-138": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-138_recal.bam",
+        "sample": "CM-138",
+        "matched_normal_sample": "TAC-45",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-45_recal.bam"
+      }
+    ],
+    "CM-108": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-108_recal.bam",
+        "sample": "CM-108",
+        "matched_normal_sample": "TAC-36",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-36_recal.bam"
+      }
+    ],
+    "CM-72": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-72_recal.bam",
+        "sample": "CM-72",
+        "matched_normal_sample": "TAC-24",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-24_recal.bam"
+      }
+    ],
+    "CM-36": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-36_recal.bam",
+        "sample": "CM-36",
+        "matched_normal_sample": "TAC-12",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-12_recal.bam"
+      }
+    ],
+    "CM-90": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-90_recal.bam",
+        "sample": "CM-90",
+        "matched_normal_sample": "TAC-27",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-27_recal.bam"
+      }
+    ],
+    "CM-153": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-153_recal.bam",
+        "sample": "CM-153",
+        "matched_normal_sample": "TAC-51",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-51_recal.bam"
+      }
+    ],
+    "CM-47": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-47_recal.bam",
+        "sample": "CM-47",
+        "matched_normal_sample": "TAC-76",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-76_recal.bam"
+      }
+    ],
+    "CM-83": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-83_recal.bam",
+        "sample": "CM-83",
+        "matched_normal_sample": "TAC-94",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-94_recal.bam"
+      }
+    ],
+    "CM-39": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-39_recal.bam",
+        "sample": "CM-39",
+        "matched_normal_sample": "TAC-13",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-13_recal.bam"
+      }
+    ],
+    "CM-7": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-7_recal.bam",
+        "sample": "CM-7",
+        "matched_normal_sample": "TAC-55",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-55_recal.bam"
+      }
+    ],
+    "CM-96": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-96_recal.bam",
+        "sample": "CM-96",
+        "matched_normal_sample": "TAC-32",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-32_recal.bam"
+      }
+    ],
+    "CM-101": [
+      {
+        "bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/CM-101_recal.bam",
+        "sample": "CM-101",
+        "matched_normal_sample": "TAC-103",
+        "matched_normal_bam": "/mnt/data/jeremy/projects/smri/100X/Data_Files/BAM/TAC-103_recal.bam"
+      }
+    ]
+  },
+  "reference": "/mnt/data/reference/hs37d5.fa",
+  "exome_region": "/mnt/data/jeremy/projects/smri/sureselect_v5_capture_targets/S04380110_Padded.bed",
+  "dir": {
+    "out": "/mnt/data/jeremy/scripts/pipelines/mutect2/Data_Files",
+    "tmp": "tmp"
+  }
+}

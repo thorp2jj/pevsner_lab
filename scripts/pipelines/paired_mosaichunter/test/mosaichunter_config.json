@@ -1,0 +1,24 @@
+{
+  "resource": {
+    "dbsnp": "/mnt/data/jeremy/programs/MosaicHunter/resources/dbsnp_137.b37.tsv",
+    "repeats": "/mnt/data/jeremy/programs/MosaicHunter/resources/all_repeats.b37.bed",
+    "common_sites": "/mnt/data/jeremy/programs/MosaicHunter/resources/WES_Agilent_50M.error_prone.b37.bed"
+  },
+  "exome_region": "/mnt/data/DNASeq/BPD_BSMN/stanley_collection/sureselect_v5_capture_targets/S04380110_Covered.bed",
+  "dir": {
+    "out": "/mnt/data/jeremy/scripts/pipelines/mosaichunter/Data_Files",
+    "tmp": "tmp"
+  },
+  "samples": {
+    "TAC-94": [
+      {
+        "bam": "/mnt/data/jeremy/scripts/pipelines/mosaichunter/test/TAC-94_recal.bam",
+        "vcf": "/mnt/data/jeremy/scripts/pipelines/mosaichunter/test/TAC-94.vcf.gz",
+        "indels": "/mnt/data/jeremy/scripts/pipelines/mosaichunter/test/TAC-94_indels_CNVs.bed",
+        "sample": "TAC-94"
+      }
+    ]
+  },
+  "reference": "/mnt/data/reference/hs37d5.fa",
+  "max_depth": "400"
+}

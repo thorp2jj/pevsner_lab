@@ -80,14 +80,17 @@ rule filter_zscore_PCA_norm:
 rule norm_PCA:
     input:
         "{out}/DATA.filtered_centered.RD.txt".format(out=config["dir"]["out"]),
-        "{out}/DATA.RD_PCA".format(out=config["dir"]["out"]) 
+        "{out}/DATA.RD_PCA.PC.txt".format(out=config["dir"]["out"]) 
+
+    params:
+        "{out}/DATA.RD_PCA".format(out=config["dir"]["out"])
 
     output:
         "{out}/DATA.PCA_normalized.txt".format(out=config["dir"]["out"])
 
     shell:
         "xhmm --normalize -r {input[0]} "
-        "--PCAfiles {input[1]} "
+        "--PCAfiles {params[0]} "
         "--normalizeOutput {output} "
         "--PCnormalizeMethod PVE_mean --PVE_mean_factor 0.7"
 
@@ -96,11 +99,14 @@ rule PCA:
     input:
         "{out}/DATA.filtered_centered.RD.txt".format(out=config["dir"]["out"])
 
-    output:
+    params:
         "{out}/DATA.RD_PCA".format(out=config["dir"]["out"])
 
+    output:
+        "{out}/DATA.RD_PCA.PC.txt".format(out=config["dir"]["out"])
+
     shell:
-        "xhmm --PCA -r {input[0]} --PCAfiles {output[0]}"
+        "xhmm --PCA -r {input[0]} --PCAfiles {params[0]}"
 
 
 rule filter_samp_targ_meancenter:
@@ -120,7 +126,7 @@ rule filter_samp_targ_meancenter:
         "--excludeTargets {input[2]} --excludeTargets {input[1]} "
         "--minTargetSize 10 --maxTargetSize 10000 "
         "--minMeanTargetRD 10 --maxMeanTargetRD 500 "
-        "--minMeanSampleRD 25 -maxMeanSampleRD 200 "
+        "--minMeanSampleRD 25 --maxMeanSampleRD 200 "
         "--maxSdSampleRD 150"
 
 
@@ -146,22 +152,21 @@ rule pseq_loc_stats:
         "{out}/DATA.locus_complexity.txt".format(out=config["dir"]["out"])
 
     shell:
-        "pseq . loc-stats --locdb {input} --group targets --seqdb /mnt/data/jeremy/resources/pseq/seqdb.hg19 | awk '{{if (NR > 1) print $_}}' | sort -k1 -g | awk '{{print $10}}' | paste {params.intervals} - | awk '{{print $1\"\t\"$2}}' > {output}"
+        "pseq . loc-stats --locdb {input} --group targets --seqdb /mnt/data/jeremy/resources/pseq/seqdb.hg19 | awk '{{if (NR > 1) print $_}}' | sort -k1 -g | awk '{{print $10}}' | paste {params.intervals} - | awk '{{print $1\"\\t\"$2}}' > {output}"
 
 
 rule pseq_loc_load:
     input:
         "{out}/DATA.EXOME.targets.reg".format(out=config["dir"]["out"])
 
-    #params:
-    #    locdb_out = "{out}".format(out=config["dir"]["out"])
-
-    output:
-        "{out}/DATA.EXOME.targets.LOCDB".format(out=config["dir"]["out"]),
+    params:
         "{out}/DATA.EXOME.targets.LOCDB.loc-load".format(out=config["dir"]["out"])
 
+    output:
+        "{out}/DATA.EXOME.targets.LOCDB".format(out=config["dir"]["out"])
+
     shell:
-        "pseq . loc-load --locdb {output[0]} --file {input} --group targets --out {output[1]}"
+        "pseq . loc-load --locdb {output[0]} --file {input[0]} --group targets --out {params[0]}"
 
 
 rule convert_intervals:
@@ -172,7 +177,7 @@ rule convert_intervals:
         "{out}/DATA.EXOME.targets.reg".format(out=config["dir"]["out"])
 
     shell:
-        "interval_list_to_pseq_reg {input} > {output}"
+        "interval_list_to_pseq_reg {input.intervals} > {output}"
 
 
 rule extreme_GC:
@@ -207,7 +212,7 @@ rule per_target_GC:
 
 rule GATK_merge_depths:
     input:
-         ("{out}/{tmp}/{sample}.sample_interval_statistics".format(out=config["dir"]["out"], tmp=config["dir"]["tmp"], sample=sample) for sample in config["samples"].keys())
+         ("{out}/{tmp}/{sample}.sample_interval_summary".format(out=config["dir"]["out"], tmp=config["dir"]["tmp"], sample=sample) for sample in config["samples"].keys())
 
     output:
         "{out}/DATA.RD.txt".format(out=config["dir"]["out"])
@@ -227,23 +232,21 @@ rule GATK_get_depths:
         lambda wildcards : config["samples"][wildcards.sample][int(0)]["bam"]
 
     output:
-        #"{out}/{tmp}/{sample}".format(out=config["dir"]["out"], tmp=config["dir"]["tmp"], sample="{sample}")
-        #"{out}/{tmp}/{sample}.summary".format(out=config["dir"]["out"], tmp=config["dir"]["tmp"], sample="{sample}")
-        "{out}/{tmp}/{sample}.sample_interval_statistics".format(out=config["dir"]["out"], tmp=config["dir"]["tmp"], sample="{sample}")
-        #"{out}/{tmp}/{sample}.sample_statistics".format(out=config["dir"]["out"], tmp=config["dir"]["tmp"], sample="{sample}")
+        #"{out}/{tmp}/{sample}".format(out=config["dir"]["out"], tmp=config["dir"]["tmp"], sample="{sample}"),
+        "{out}/{tmp}/{sample}.sample_interval_summary".format(out=config["dir"]["out"], tmp=config["dir"]["tmp"], sample="{sample}")
 
     params:
         sample=lambda wildcards : config["samples"][wildcards.sample][int(0)]["sample"],
         intervals=config["exome_region"],
         reference=config["reference"],
-        #outname="{out}/{tmp}/{sample}".format(out=config["dir"]["out"], tmp=config["dir"]["tmp"], sample="{sample}")
+        outname="{out}/{tmp}/{sample}".format(out=config["dir"]["out"], tmp=config["dir"]["tmp"], sample="{sample}")
 
     run:
         shell(
             "java -jar -Xmx8g -Djava.io.tmpdir=/mnt/data/jeremy/scratch/tmp $GATK "
             "-T DepthOfCoverage "
             "-R {params.reference} "
-            #"-o {params.outname} "
+            "-o {params.outname} "
             "-I {input[0]} "
             "-dt BY_SAMPLE -dcov 5000 -l INFO --omitDepthOutputAtEachBase "
             "--minBaseQuality 0 --minMappingQuality 20 --start 1 --stop 5000 --nBins 200 "
